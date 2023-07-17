@@ -23,8 +23,7 @@ def get_secret(setting, secrets=secrets):
     try:
         return secrets[setting]
     except KeyError:
-        error_msg = 'Set the {0} environment\
-              variable'.format(setting)
+        error_msg = 'Missing "{}" environment variable!'.format(setting)
         raise ImproperlyConfigured(error_msg)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
